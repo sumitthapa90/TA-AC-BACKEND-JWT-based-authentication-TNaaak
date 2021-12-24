@@ -11,7 +11,8 @@ router.post("/register", async (req, res, next) => {
   try {
     var user = await User.create(req.body);
     console.log(user);
-    res.status(200).json({ user });
+    var token = await user.signToken();
+    res.status(200).json({ user: user.userJSON(token) });
   } catch (error) {
     next();
   }
