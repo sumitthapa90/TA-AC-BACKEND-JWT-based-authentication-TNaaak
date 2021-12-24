@@ -7,7 +7,7 @@ router.get("/", function (req, res, next) {
   res.json({ msg: "welcome" });
 });
 
-router.get("/dashboard", auth.verifyToken, (req, res, next) => {
+router.get("/protected", auth.verifyToken, (req, res, next) => {
   res.json({ msg: "Welcom to dashboard" });
 });
 
