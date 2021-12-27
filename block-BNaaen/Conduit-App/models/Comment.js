@@ -19,6 +19,7 @@ var commentSchema = new Schema(
   { timestamps: true }
 );
 
+
 //Method for displaying the comment
 commentSchema.methods.displayComment = function (id = null) {
   return {
