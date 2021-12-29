@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 var User = require("../models/User");
 
+
 //GET /api/profiles/:username
 
 router.get("/:username", async (req, res, next) => {
